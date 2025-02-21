@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    export let title = "Welcome to Tech Conference 2025";
+</script>
+
+<h1>{title}</h1>
+<p>Join us for an exciting event filled with innovation and networking.</p>
