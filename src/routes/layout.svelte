@@ -1,5 +1,5 @@
 <script>
-    import { pages } from './stores';
+    import { pages } from '../lib/stores';
 </script>
 
 <nav>
