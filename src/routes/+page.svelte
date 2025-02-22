@@ -222,14 +222,18 @@
     }
     .speaker-card {
         background: white;
-        padding: 1rem;
+        padding: 2rem;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
     .speaker-card img {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
+    }
+
+    .speaker-card h3{
+        font-size: 1.5rem;
     }
 </style>
