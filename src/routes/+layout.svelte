@@ -55,7 +55,8 @@
         text-decoration: none;
     }
     a:hover {
-        text-decoration: underline;
+        /* text-decoration: underline; */
+        color: azure;
     }
     .search-bar {
         display: flex;

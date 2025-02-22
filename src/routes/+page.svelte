@@ -1,10 +1,10 @@
-<script>
+<!-- <script>
     export let title = "Welcome to Tech Conference 2025";
 </script>
 
 <section class="hero">
     <div class="banner-content">
-        <h1>Welcome to Tech Conference 2025</h1>
+        <h1>{title}</h1>
         <p>Join us for an exciting event filled with innovation and networking.</p>
     </div>
 </section>
@@ -127,5 +127,113 @@
     }
     .contact {
         background: #ffebee;
+    }
+</style> -->
+
+
+<script>
+    import { pages } from '../lib/stores';
+    let searchQuery = '';
+</script>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<header class="banner">
+    <div class="banner-content">
+        <h1>Tech Conference 2025</h1>
+        <p>Innovating the Future</p>
+        <button class="register-btn">Register Now</button>
+    </div>
+</header>
+
+<section class="featured-speakers">
+    <h2>Keynote Speakers</h2>
+    <div class="speakers-grid">
+        <div class="speaker-card">
+            <img src="../images/speaker1.jpeg" alt="Dr. John Doe">
+            <h3>Dr. John Doe</h3>
+            <p>AI Researcher</p>
+        </div>
+        <div class="speaker-card">
+            <img src="../images/speaker2.jpg" alt="Jane Smith">
+            <h3>Jane Smith</h3>
+            <p>Cybersecurity Expert</p>
+        </div>
+        <div class="speaker-card">
+            <img src="../images/speaker3.webp" alt="Alex Johnson">
+            <h3>Alex Johnson</h3>
+            <p>Blockchain Developer</p>
+        </div>
+    </div>
+</section>
+
+<slot />
+
+<style>
+    
+    .banner {
+        background: url('/images/banner.jpg') no-repeat center center/cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+    .banner-content {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .banner h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .banner p {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .register-btn {
+        background: #ff9800;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .register-btn:hover {
+        background: #e68900;
+    }
+    .featured-speakers {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: #f4f4f4;
+    }
+    .speakers-grid {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+    .speaker-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .speaker-card img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    .speaker-card h3{
+        font-size: 1.5rem;
     }
 </style>
