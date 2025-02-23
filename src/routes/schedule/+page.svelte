@@ -1,169 +1,167 @@
 <script>
-    let searchQuery = './stores';
-</script>
-
-
-<section class="featured-speakers">
-    <h2>Keynote Speakers</h2>
-    <div class="speakers-grid">
-        <div class="speaker-card">
-            <img src="/images/speaker1.jpg" alt="Dr. John Doe">
-            <h3>Dr. John Doe</h3>
-            <p>AI Researcher</p>
+    import NavBar from '$lib/components/NavBar.svelte';
+    import Footer from '$lib/components/Footer.svelte';
+  
+    const schedule = [
+      {
+        date: "March 15, 2025",
+        time: "09:00 AM - 10:30 AM",
+        topic: "The Future of AI & Robotics",
+        speaker: "Dr. Jane Smith",
+        image: "/images/speaker1.jpeg"
+      },
+      {
+        date: "March 15, 2025",
+        time: "11:00 AM - 12:30 PM",
+        topic: "Cybersecurity in a Digital Age",
+        speaker: "John Doe",
+        image: "/images/speaker2.jpg"
+      },
+      {
+        date: "March 15, 2025",
+        time: "02:00 PM - 03:30 PM",
+        topic: "Blockchain and Web3 Innovations",
+        speaker: "Lisa Brown",
+        image: "/images/speaker3.webp"
+      },
+      {
+        date: "March 16, 2025",
+        time: "10:00 AM - 11:30 AM",
+        topic: "Cloud Computing Trends",
+        speaker: "Michael Lee",
+        image: "/images/speaker4.webp"
+      },
+      {
+        date: "March 16, 2025",
+        time: "01:00 PM - 02:30 PM",
+        topic: "Big Data & AI in Business",
+        speaker: "Sophia Wilson",
+        image: "/images/speaker5.webp"
+      }
+    ];
+  </script>
+  
+  
+  <section class="schedule-section">
+    <h1>Conference Schedule</h1>
+    <div class="schedule-container">
+      {#each schedule as session}
+        <div class="schedule-card">
+          <div class="schedule-details">
+            <p class="date">{session.date}</p>
+            <p class="time">{session.time}</p>
+            <h3 class="topic">{session.topic}</h3>
+            <div class="speaker-info">
+              <img src={session.image} alt={session.speaker} />
+              <p class="speaker-name">{session.speaker}</p>
+            </div>
+          </div>
+          <button class="book-btn">Book Now</button>
         </div>
-        <div class="speaker-card">
-            <img src="/images/speaker2.jpg" alt="Jane Smith">
-            <h3>Jane Smith</h3>
-            <p>Cybersecurity Expert</p>
-        </div>
-        <div class="speaker-card">
-            <img src="/images/speaker3.jpg" alt="Alex Johnson">
-            <h3>Alex Johnson</h3>
-            <p>Blockchain Developer</p>
-        </div>
+      {/each}
     </div>
-</section>
-
-<section class="schedule">
-    <h2>Conference Schedule</h2>
-    <table class="schedule-table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Topic</th>
-                <th>Speaker</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>March 10, 2025</td>
-                <td>09:00 AM - 10:00 AM</td>
-                <td>Future of AI in Business</td>
-                <td>Dr. John Doe</td>
-            </tr>
-            <tr>
-                <td>March 10, 2025</td>
-                <td>10:30 AM - 11:30 AM</td>
-                <td>Cybersecurity Trends</td>
-                <td>Jane Smith</td>
-            </tr>
-            <tr>
-                <td>March 10, 2025</td>
-                <td>01:00 PM - 02:00 PM</td>
-                <td>Blockchain in Finance</td>
-                <td>Alex Johnson</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<slot />
-
-<style>
-    nav {
-        background: #333;
-        padding: 1rem;
+  </section>
+  
+  
+  <style>
+    .schedule-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #f5f5f5;
     }
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  
+    .schedule-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+  
+    .schedule-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .schedule-card {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .schedule-card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .schedule-details {
+      text-align: left;
+    }
+  
+    .date {
+      font-weight: bold;
+      color: #555;
+    }
+  
+    .time {
+      font-size: 1rem;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+  
+    .topic {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+  
+    .speaker-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 0.5rem;
+    }
+  
+    .speaker-info img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  
+    .speaker-name {
+      font-weight: bold;
+      color: #333;
+    }
+  
+    .book-btn {
+      background: #ff6600;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+  
+    .book-btn:hover {
+      background: #e65c00;
+    }
+  
+    @media (max-width: 768px) {
+      .schedule-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .book-btn {
+        margin-top: 10px;
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
+      }
     }
-    .logo {
-        font-size: 1.5rem;
-        color: white;
-        font-weight: bold;
-    }
-    .nav-links {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-grow: 1;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    .search-bar {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    .search-bar input {
-        padding: 0.5rem;
-        border-radius: 5px;
-        border: none;
-    }
-    .search-bar button {
-        padding: 0.5rem;
-        background: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .search-bar button:hover {
-        background: #ddd;
-    }
-    .banner {
-        background: url('/images/banner.jpg') no-repeat center center/cover;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        position: relative;
-    }
-    .banner-content {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-    }
-    .banner h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-    }
-    .banner p {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-    .register-btn {
-        background: #ff9800;
-        color: white;
-        padding: 10px 20px;
-        font-size: 1.2rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .register-btn:hover {
-        background: #e68900;
-    }
-    .featured-speakers, .schedule {
-        text-align: center;
-        padding: 4rem 2rem;
-        background: #f4f4f4;
-    }
-    .schedule-table {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        border-collapse: collapse;
-    }
-    .schedule-table th, .schedule-table td {
-        padding: 10px;
-        border: 1px solid #ddd;
-        text-align: left;
-    }
-    .schedule-table th {
-        background: #0073e6;
-        color: white;
-    }
-</style>
+  </style>
+  
