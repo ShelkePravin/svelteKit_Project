@@ -262,8 +262,16 @@ body{
     background: #e6b800;
   }
   .featured-speakers {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     text-align: center;
+  }
+
+  .featured-speakers h2{
+    font-family: Popines, sans-serif;
+    font-size: 2rem !important;
+    justify-content: center;
+    margin: 0 1 !important;
+
   }
   .speakers-container {
     display: flex;
@@ -277,7 +285,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 200px;
+    max-width: 300px;
   }
   .speaker img {
     width: 100%;
@@ -285,7 +293,7 @@ body{
   }
   .speaker h3 {
     margin-top: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .speaker p {
     color: #666;
@@ -448,3 +456,64 @@ body{
   }
 
   /* end here about page styling here */
+
+  /* count down timer styling */
+  .countdown {
+    margin: 4rem auto; /* Centers the box horizontally and adds 1rem top-bottom space */
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center; /* Centers text inside */
+    
+    /* Centers the box in a flex container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    background-image: url('../images/coutdown-bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .countdown h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 28px;
+    font-family: Popines, sans-serif;
+    color: #f5f5f5;
+  }
+
+  .timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .time-box {
+    background: white;
+    color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 80px;
+  }
+
+  .time-box span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .time-box p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* end here count down styling */
