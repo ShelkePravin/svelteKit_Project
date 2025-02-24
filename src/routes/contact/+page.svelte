@@ -1,6 +1,7 @@
 <script>
     import NavBar from '$lib/components/NavBar.svelte';
     import Footer from '$lib/components/Footer.svelte';
+    // import "$lib/styles/global.css";
   
     let name = "";
     let email = "";
@@ -13,6 +14,10 @@
       message = "";
     }
   </script>
+
+<head>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
   
   <section class="contact-section">
     <div class="contact-container">
@@ -28,91 +33,25 @@
   
       <div class="social-links">
         <h3>Follow Us</h3>
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        
       </div>
     </div>
   </section>
   
   
   <style>
-    .contact-section {
-      padding: 4rem 2rem;
-      text-align: center;
-      background-color: #f5f5f5;
-    }
-  
-    .contact-container {
-      max-width: 600px;
-      margin: auto;
-    }
-  
-    .contact-container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #222;
-    }
-  
-    .contact-container p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-  
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-  
-    .contact-form textarea {
-      height: 150px;
-      resize: none;
-    }
-  
-    .contact-form button {
-      background: #ffcc00;
-      color: #333;
-      padding: 1rem;
-      border: none;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-  
-    .contact-form button:hover {
-      background: #e6b800;
-    }
-  
-    .social-links {
-      margin-top: 2rem;
-    }
-  
-    .social-links h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-  
-    .social-links a {
-      margin: 0 10px;
-      font-size: 1.5rem;
-      color: #333;
-      transition: color 0.3s ease;
-    }
-  
-    .social-links a:hover {
-      color: #ffcc00;
-    }
+    
   </style>
   

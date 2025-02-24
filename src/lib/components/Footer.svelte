@@ -8,7 +8,7 @@
     .footer {
       background: #222;
       color: white;
-      padding: 2rem;
+      padding: 1rem;
       text-align: center;
     }
     .footer-container {

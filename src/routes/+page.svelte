@@ -1,6 +1,11 @@
 <script>
     import NavBar from '../lib/components/NavBar.svelte';
+    // import "../styles/global.css";
   </script>
+
+<head>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
   
   <section class="hero">
     <h1>Tech Conference 2025</h1>
@@ -28,63 +33,4 @@
       </div>
     </div>
   </section>
-  
-  <style>
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: url('/images/banner.jpg') center/cover no-repeat;
-      color: white;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .register-btn {
-      background: #ffcc00;
-      color: #333;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .register-btn:hover {
-      background: #e6b800;
-    }
-    .featured-speakers {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .speakers-container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .speaker {
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 200px;
-    }
-    .speaker img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .speaker h3 {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-    }
-    .speaker p {
-      color: #666;
-      font-size: 1rem;
-    }
-  </style>
   
