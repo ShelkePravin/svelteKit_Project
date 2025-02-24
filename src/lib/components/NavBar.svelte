@@ -1,11 +1,12 @@
 <script>
   import { onMount } from 'svelte';
+  
 </script>
 
 <nav>
   <div class="navbar-container">
     <div class="logo">
-      <a href="/"><img src="/logo.png" alt="Tech Conference Logo" /></a>
+      <a href="/"><img src="/images/logo.png" alt="Tech Conference Logo" /></a>
     </div>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
@@ -26,7 +27,7 @@
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
   nav {
-    background-color: #333;
+    background-color: #e8e2e2;
     padding: 1rem;
   }
   .navbar-container {
@@ -35,7 +36,7 @@
     justify-content: space-between;
   }
   .logo img {
-    height: 40px;
+    height: 20px;
   }
   .nav-links {
     display: flex;
@@ -43,9 +44,9 @@
     gap: 1.5rem;
   }
   .nav-links a {
-    color: white;
+    color: #000;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 18px;
     transition: color 0.3s;
   }
   .nav-links a:hover {

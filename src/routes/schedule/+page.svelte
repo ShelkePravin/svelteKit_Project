@@ -1,6 +1,7 @@
 <script>
     import NavBar from '$lib/components/NavBar.svelte';
     import Footer from '$lib/components/Footer.svelte';
+    // import "$lib/styles/global.css";
   
     const schedule = [
       {
@@ -40,6 +41,10 @@
       }
     ];
   </script>
+
+<head>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
   
   
   <section class="schedule-section">
@@ -64,104 +69,6 @@
   
   
   <style>
-    .schedule-section {
-      text-align: center;
-      padding: 4rem 2rem;
-      background-color: #f5f5f5;
-    }
-  
-    .schedule-section h1 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-  
-    .schedule-container {
-      max-width: 1000px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-  
-    .schedule-card {
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    }
-  
-    .schedule-card:hover {
-      transform: translateY(-5px);
-    }
-  
-    .schedule-details {
-      text-align: left;
-    }
-  
-    .date {
-      font-weight: bold;
-      color: #555;
-    }
-  
-    .time {
-      font-size: 1rem;
-      color: #777;
-      margin-bottom: 0.5rem;
-    }
-  
-    .topic {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-      color: #222;
-    }
-  
-    .speaker-info {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 0.5rem;
-    }
-  
-    .speaker-info img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-  
-    .speaker-name {
-      font-weight: bold;
-      color: #333;
-    }
-  
-    .book-btn {
-      background: #ff6600;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-  
-    .book-btn:hover {
-      background: #e65c00;
-    }
-  
-    @media (max-width: 768px) {
-      .schedule-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .book-btn {
-        margin-top: 10px;
-        width: 100%;
-      }
-    }
+    
   </style>
   
