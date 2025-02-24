@@ -1,5 +1,13 @@
 <script>
   import { onMount } from 'svelte';
+  import { createEventDispatcher } from "svelte";
+
+
+  const dispatch = createEventDispatcher();
+
+function toggleDarkMode() {
+  dispatch("toggleDark");
+}
   
 </script>
 
@@ -20,6 +28,9 @@
       <input type="text" placeholder="Search..." />
       <i class="fas fa-search"></i>
     </div>
+    <!-- <button class="dark-mode-toggle" on:click={toggleDarkMode}>
+      🌙 Dark / ☀️ Light
+    </button> -->
   </div>
 </nav>
 

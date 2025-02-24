@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer-container">
-      <p>&copy; 2025 Tech Conference. All rights reserved.</p>
+      <p>&copy; 2025 The KeyNote. All rights reserved.</p>
     </div>
   </footer>
   

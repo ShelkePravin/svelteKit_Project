@@ -1,10 +1,39 @@
 *{
     font-family: popines, sans-serif;
 }
+/* dark and light mood styling */
 
-body{
-    margin: 0;
+/* Default Light Mode */
+:root {
+  --bg-color: white;
+  --text-color: black;
 }
+
+/* Dark Mode */
+.dark {
+  --bg-color: #121212;
+  --text-color: white;
+}
+
+/* Apply Theme */
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.nav-links a {
+  color: var(--text-color);
+}
+
+/* end here */
 
 /* speker page styling */
 
